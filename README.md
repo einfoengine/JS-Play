@@ -5,10 +5,14 @@ Hi, this tutorial is mainly created to help those who are interested in to core 
 Hope I can contribute to them who are keen to learn at any age and any thing.
 Best of luck.
 
-# Index:
-===
+# Outline:
+Hey, JS is mostly all about playing with events and objects. Please have a basic understanding on JS from MDN and then start playing.
 1. Mouse events fun
     - Changing background
     - Adding elements
     - Alert accordion
     - Catching ball
+2. Dom manipulation
+    - Not inline style make class to make it wow
+    - Append child
+    - Bubble up and Delegation
