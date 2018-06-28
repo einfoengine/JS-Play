@@ -7,6 +7,8 @@ Best of luck.
 
 # Outline:
 Hey, JS is mostly all about playing with events and objects. Please have a basic understanding on JS from MDN and then start playing.
+0. Startup
+    - Please download or clone the project and start writing your code. Or just make a project alike and build with the knowledge.
 1. Mouse events fun
     - Changing background
     - Adding elements
