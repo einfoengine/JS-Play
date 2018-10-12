@@ -9,14 +9,12 @@ Best of luck.
 Hey, JS is mostly all about playing with events and objects. Please have a basic understanding on JS from MDN and then start playing.
 0. Startup
     - Please download or clone the project and start writing your code. Or just make a project alike and build with the knowledge.
-    1. Worm up
-    - Examine the DOM (Document Object Model)
-2. Mouse events fun
+1. Mouse events fun
     - Changing background
     - Adding elements
     - Alert accordion
     - Catching ball
-3. Dom manipulation
+2. Dom manipulation
     - Not inline style make class to make it wow
     - Append child
     - Bubble up and Delegation
