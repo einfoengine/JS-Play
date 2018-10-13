@@ -8,114 +8,123 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="main" class="wrapper main">
-        <div id="headings">
-            <h1 id="heading-1">I am h1</h1>
-            <h2 id="heading-2">I am h2</h2>
-            <h3 id="heading-3">I am h3</h3>
-            <h4 id="heading-4">I am h4</h4>
-            <h5 id="heading-5">I am h5</h5>
-            <h6 id="heading-6">I am h6</h6>
-        </div>
-        <ul id="lists" class="collection">
-            <li id="list" class="collection-item">
-                List Item
-                <a id="first-link" href="#" class="delete-item secondary-content">
-                    <i class="fa fa-remove"></i>
-                </a>
-            </li>
-            <li class="collection-item">
-                List Item
-                <a href="#" class="delete-item secondary-content">
-                    <i class="fa fa-remove"></i>
-                </a>
-            </li>
-            <li id="test-list" class="collection-item">
-                List Item
-                <a href="#" class="delete-item secondary-content">
-                    <i class="fa fa-remove"></i>
-                </a>
-            </li>
-            <li class="collection-item">
-                List Item
-                <a href="#" class="delete-item secondary-content">
-                    <i class="fa fa-remove"></i>
-                </a>
-            </li>
-            <li class="collection-item">
-                List Item
-                <a href="#" class="delete-item secondary-content">
-                    <i class="fa fa-remove"></i>
-                </a>
-            </li>
-        </ul>
-        <form id="my-form" action="">
-            <div class="form-group">
-                <lavel>Name</lavel>
-                <input type="text"/>
-            </div>
-            <div class="form-group">
-                <lavel>Email</lavel>
-                <input type="email"/>
-            </div>
-            <div class="form-group">
-                <lavel>Password</lavel>
-                <input type="password"/>
-            </div>
-
-        </form><!--// end my form-->
-        <img src="https://www.flickr.com/photos/ablyart/40264508201/" alt="Shanewaz Al Marufs Clicks"/>
+<div id="main" class="wrapper main">
+    <div id="headings">
+        <h1 id="heading-1">I am h1</h1>
+        <h2 id="heading-2">I am h2</h2>
+        <h3 id="heading-3">I am h3</h3>
+        <h4 id="heading-4">I am h4</h4>
+        <h5 id="heading-5">I am h5</h5>
+        <h6 id="heading-6">I am h6</h6>
     </div>
-    <script>
-        let val;
+    <ul id="lists" class="collection">
+        <li id="list" class="collection-item">
+            List Item
+            <a id="first-link" href="#" class="delete-item secondary-content">
+                <i class="fa fa-remove"></i>
+            </a>
+        </li>
+        <li class="collection-item">
+            List Item
+            <a href="#" class="delete-item secondary-content">
+                <i class="fa fa-remove"></i>
+            </a>
+        </li>
+        <li id="test-list" class="collection-item">
+            List Item
+            <a href="#" class="delete-item secondary-content">
+                <i class="fa fa-remove"></i>
+            </a>
+        </li>
+        <li class="collection-item">
+            List Item
+            <a href="#" class="delete-item secondary-content">
+                <i class="fa fa-remove"></i>
+            </a>
+        </li>
+        <li class="collection-item">
+            List Item
+            <a href="#" class="delete-item secondary-content">
+                <i class="fa fa-remove"></i>
+            </a>
+        </li>
+    </ul>
+    <form id="my-form" action="">
+        <div class="form-group">
+            <lavel>Name</lavel>
+            <input name="my_name" type="text"/>
+        </div>
+        <div class="form-group">
+            <lavel>Email</lavel>
+            <input name="my_email" type="email"/>
+        </div>
+        <div class="form-group">
+            <lavel>Password</lavel>
+            <input name="my_pass" type="password"/>
+        </div>
 
-        val = document;
-        val = document.all;
-        val = document.all[2];
-        val = document.all.length;
-        val = document.head;
-        val = document.body;
-        val = document.doctype;
-        val = document.domain;
-        val = document.URL;
-        val = document.characterSet;
-        val = document.contentType;
+    </form><!--// end my form-->
+    <img src="https://www.flickr.com/photos/ablyart/40264508201/" alt="Shanewaz Al Marufs Clicks"/>
+</div>
+<script>
+    let val;
 
-        val = document.forms;
-        val = document.forms[0];
-        val = document.forms[0].id;
-        val = document.forms[0].method;
-        val = document.forms[0].action;
+    val = document;
+    val = document.all;
+    val = document.all[2];
+    val = document.all.length;
+    val = document.head;
+    val = document.body;
+    val = document.doctype;
+    val = document.domain;
+    val = document.URL;
+    val = document.characterSet;
+    val = document.contentType;
 
-        val = document.links;
-        val = document.links[0];
-        val = document.links[0].id;
-        val = document.links[0].className;
-        val = document.links[0].classList;
-        val = document.links[0].classList[0];
+    val = document.forms;
+    val = document.forms[0];
+    val = document.forms[0].id;
+    val = document.forms[0].method;
+    val = document.forms[0].action;
 
-        val = document.images;
+    val = document.links;
+    val = document.links[0];
+    val = document.links[0].id;
+    val = document.links[0].className;
+    val = document.links[0].classList;
+    val = document.links[0].classList[0];
 
-        val = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-        val = document.getElementsByTagName("h1");
+    val = document.images;
 
-        val = document.scripts[0];
-        // val = document.scripts[0].getAttribute;
+    val = document.getElementsByTagName('h1');
+    val = document.getElementsByClassName('collection-item');
+    val = document.getElementsByName('my_email')[0];
+    // val = lists; // this is not the best practice
+    val = document.getElementById("lists");
+    val = document.querySelector("li");// selects the first element only
+    val = document.querySelectorAll("li");
+    // val = document.querySelector("ul").childNodes; // Node list
+    val = document.querySelector("ul.collection").firstChild;
+    val = document.querySelector("ul").children; // HTML Collection
 
-        let scripts = document.scripts;
+    // val = document.querySelector("ul").childNodes;
 
-        let scriptsArr = Array.from(scripts);
+    let scripts = document.scripts;
+    let script = scripts[0];
 
-        scriptsArr.forEach(function(script) {
-            console.log(script.getAttribute('src'));
-        });
+    let scriptsArr = Array.from(scripts);
 
-        console.log(val);
-        console.log(typeof (val));
-        console.log(val.nodeName);
-        console.log("");
-        console.log(scripts);
-        console.log(scriptsArr);
-    </script>
+    scriptsArr.forEach(function(script) {
+        console.log(script.getAttribute('src'));
+    });
+
+
+    console.log(val);
+    console.log(typeof (val));
+    console.log(val.nodeName);
+    console.log("");
+    console.log(scripts);
+    console.log(scriptsArr);
+</script>
 </body>
 </html>
