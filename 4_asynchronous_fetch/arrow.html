@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--In this document arrow function is demonstrated-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow function</title>
+</head>
+<body>
+        (param1, param2, …, paramN) => { statements }<br>
+        <h1>Arrow function</h1>
+        <h3>Definition:</h3>
+        <p>A way of writing function where you don't name a function nor you use the function keyword</p>
+        <p><i>I suggest you finish the callback first then go through this.</i></p>
+        <h3>Syntax</h3>
+        <p>
+        (param1, param2, …, paramN) => expression<br>
+        // equivalent to: => { return expression; }<br>
+
+        // Parentheses are optional when there's only one parameter name:<br>
+        (singleParam) => { statements }<br>
+        singleParam => { statements }<br>
+
+        // The parameter list for a function with no parameters should be written with a pair of parentheses.<br>
+        () => { statements }
+    </p>
+    <h3>Advance Syntax</h3>
+    <p>
+        // Parenthesize the body of function to return an object literal expression:<br>
+        params => ({foo: bar})<br>
+        <br>
+        // Rest parameters and default parameters are supported<br>
+        (param1, param2, ...rest) => { statements }<br>
+        (param1 = defaultValue1, param2, …, paramN = defaultValueN) => {<br>
+        statements }<br>
+        <br>
+        // Destructuring within the parameter list is also supported<br>
+        var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;<br>
+        f(); // 6
+    </p>
+
+    <script>
+        // Example 1
+        var cars = [
+            'Toyota',
+            'Suzuki',
+            'Honda',
+            'Tata',
+            'Bmw',
+            'Mercedes'
+        ];
+
+        const carsMap = cars.map(function (val, ndx, arr) {
+            return {val, ndx};
+        });
+
+        const CarsMap = cars.map((val, ndx) => {return {val, ndx}});
+        console.log(carsMap);
+        console.log(CarsMap);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Call back function in JS</title>
+</head>
+<body>
+<h1>Callback function in JS:</h1>
+<h3>What is callback?</h3>
+<p>A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.</p>
+<script>
+    // Example 1
+    // This example explains enough what the callback is and how to use it. The example is collected from MDN.
+
+    function greeting(name) {
+        alert('Hello ' + name);
+    }
+
+    function processUserInput(callback) {
+        var name = prompt('Please enter your name.');
+        callback(name);
+    }
+
+    processUserInput(greeting);
+    /*
+    - The function greeting is passed as an argument of processUserInput().
+    - So the 'callback' is referring to the function greeting().
+    - This way is helpful to execute some action synchronously in JS as the JS it self a asynchronous.
+    */
+
+    // Example 2
+    function doHomework(first, second) {
+        alert(`Starting my ${first} homework.`);
+        second();
+    }
+
+    doHomework('math', function() {
+        alert('Finished my homework');
+    });
+    /*
+    - In definition the function doHomework() is passing 2 arguments. The first argument is being used as a variable which is
+    the name of the subject. The second argument is used as a function.
+    - In invocation the first argument is the name of the subject and the
+    second argument is a function as a function is required in the definition of this function.
+    */
+</script>
+</body>
+</html>

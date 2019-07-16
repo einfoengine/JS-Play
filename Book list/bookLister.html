@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <form id="book_entry_form" class="book_entry_form form_default" name="bookEntry">
+                <h3 class="h3">Add Book</h3>
+                <h5 class="h5">Title</h5>
+                <input type="text" name="book_name" id="book_name" placeholder="Add book name here">
+                <h5 class="h5">Author</h5>
+                <input type="text" name="book_author" id="book_author" placeholder="Add author name here">
+                <h5 class="h5">Price</h5>
+                <input type="number" name="book_price" id="book_price" placeholder="Price here">
+                <br>
+                <a href="#" id="book_submit">Submit</a>
+            </form>
+            <!--// end book entry form-->
+            <br>
+            <table id="books_table" width="600" border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Book Title</th>
+                        <th>Book Author</th>
+                        <th>Book Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="books_list">
+
+                </tbody>
+            </table>
+            <!--end table-->
+        </div>
+        <!--end container-->
+    </div>
+    <!--// end wrapper-->
+    <script src="bookLister.js"></script>
+</body>
+
+</html>

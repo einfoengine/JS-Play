@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data from external API</title>
+</head>
+<body>
+<div class="container">
+    <h2>Check jokes</h2>
+    <form action="">
+        <div>
+            <label for="num_inp">Number of jokes</label>
+            <input type="number" name="num_inp" id="num_inp">
+        </div>
+        <div>
+            <button id="get-jokes" class="get-jokes">Get Jokes</button><!--// better to use ID for all the elements and and the button type for button elements-->
+        </div>
+        <ul id="jokes" class="jokes">
+
+        </ul>
+    </form>
+</div><!--// container-->
+<script>
+    const jokeRequest = document.getElementById('get-jokes');
+    const number = document.getElementById('num_inp');
+    const jokesHolder = document.getElementById('jokes')
+    // on click
+    jokeRequest.addEventListener('click', function (e) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', `http://api.icndb.com/jokes/random/${number.value}`, true);
+        xhr.onload = function () {
+            let str = JSON.parse(xhr.responseText).value;
+            let output = '';
+            str.forEach(
+                function (dta, ndx) {
+                    output += `<li>${str[ndx].joke}</li>`;
+                }
+            );
+            jokesHolder.innerHTML = output;
+        }
+        xhr.send();
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>

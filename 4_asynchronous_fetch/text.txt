@@ -1,0 +1,12 @@
+{
+    "Name":"Maruf",
+    "Age": 33,
+    "Children":1,
+    "Wife": 1,
+    "Family_members_name": {
+        "Mother": "Piklu",
+        "Father": "Habibullah",
+        "Brother": "Motu",
+        "Sister": "Mout"
+    }
+}

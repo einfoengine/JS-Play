@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*General*/
+        /*Classes*/
+        .line-block{
+            display: block;
+        }
+        /*Elements*/
+        #widget-tasks{
+            background: #eeeeee;
+        }
+        #tasksHolder > li > a:first-child{
+
+        }
+        #tasksHolder > li > a:last-child{
+
+        }
+    </style>
+</head>
+<body>
+<div id="widget-tasks" class="widget-tasks">
+    <span></span>
+    <h3>Task List</h3>
+    <form id="task-form" class="task=form" action="event.html">
+        <level class="level-add-task line-block">Add tasks</level>
+        <input id="input-task" class="input-task"  type="text" placeholder="Input your task here"/>
+    </form>
+    <button id="add-task" type="button">Add</button>
+    <ul id="tasks-list-wrap">
+        <li>Please check your reminders first <a href="#">x</a><a href="#"> *</a></li>
+    </ul>
+    <button id="clear-tasks" type="button">Clear</button>
+</div>
+<script type="text/javascript">
+    let widgetTasks = document.querySelector("#widget-tasks");
+    let simulator = document.querySelector(`#widgetTasks > span:first-child`);
+    let modTitle = document.querySelector('#widget-tasks > h3');
+    let formTask = document.querySelector('#task-form');
+    let inputLevel = document.querySelector('#task-form > level.level-add-task');
+    let inputTask = document.querySelector('#task-form > input.input-task');
+    let btnAdd = document.querySelector('#add-task');
+    let btnClear = document.querySelector('#clear-tasks');
+    let tasksListWrap = document.querySelector('#task-list-wrap');
+    let edt = document.querySelector('#tasks-holder > li > a:first-child');
+    let del = document.querySelector('#tasks-holder > li > a:last-child');
+
+    function eventType(e){
+        console.log(`The event type: ${e.type}`);
+    }
+    inputTask.value = '';
+    function input(e){
+        // console.log(e.target.value);
+        // console.log(inputTask.value);
+        e.preventDefault();
+    }
+    // inputTask.addEventListener('keydown',input);
+    // inputTask.addEventListener('input', input);
+    inputTask.addEventListener('change', input);
+    btnAdd.addEventListener('click', eventType);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Create Remove Replace</title>
+</head>
+<body>
+    <script>
+        // Create Elements
+        let wrapper = document.createElement('div');
+        wrapper.className = 'global-wrapper';
+        const body = document.body;
+        body.appendChild(wrapper);
+
+        // Heading
+        let heading = document.createElement('h2');
+        let headText = document.createTextNode("Hello Heading!");
+        heading.id = "main-heading";
+        heading.className = "main-heading";
+        wrapper.appendChild(heading);
+        heading.appendChild(headText);
+
+        // List
+        let listHolder = document.createElement('ul');
+        listHolder.className = "list-holder";
+        wrapper.appendChild(listHolder);
+        for(let x = 0; x < 5; x++){
+            let listItem = document.createElement('li');
+            listItem.className = "collection-item";
+            let listText = document.createTextNode('Hello List - ' + x);
+            listHolder.appendChild(listItem);
+            listItem.appendChild(listText);
+        }
+
+        //Button
+        let btn = document.createElement('button');
+        let btnRemove = btn;
+        let btnRemoveText = document.createTextNode("Remove list");
+        btnRemove.className = 'brn-remove btn-danger';
+        btn.setAttribute("type","button");
+        wrapper.appendChild(btnRemove);
+        btnRemove.appendChild(btnRemoveText);
+
+        //==============
+        // Replace
+        //==============
+        // To replace we need to target the mother element first
+        let newList = document.createElement("li");
+        let newListText = document.createTextNode('New list text');
+        newList.appendChild(newListText);
+        listHolder.replaceChild(newList, document.querySelector("ul > li:nth-child(2)"));
+
+        //==============
+        // Remove
+        //==============
+        document.getElementsByClassName("list-holder")[0].children[0].remove();
+
+        // Console
+        // console.log(document.body);
+        // console.log(btn);
+
+    </script>
+
+    <p>In a different tutorial I will show, how to make the order of the loaded element. That means, which element should load first and then which element should take place. The use of <u><i><strong>insertBefore & insertAfter</strong></i></u></p>
+</body>
+</html>

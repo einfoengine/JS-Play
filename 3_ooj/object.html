@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype</title>
+</head>
+<body>
+<script>
+    // Normal object
+    const MyCar = {
+        brand: 'MyCar brand',
+        model: 'MyCar model',
+        cc: 'MyCar cc',
+        price: '1000'
+    };
+    const students = {
+        names : ['Maruf', 'Mehedi', 'Neezi'],
+        ages: [{maruf:33, Mehedi: 27, Neezi: 28}],
+        level: '0Q',
+        foodHabit: function () {
+
+        }
+    }
+    // Constructor
+    const Car = function (brand, model, cc, price) {
+        this.brand = brand;
+        this.model = model;
+        this.cc = cc;
+        this.price = price;
+
+        return ('This is car constructor showing ' + this.brand);
+    }
+
+
+    // making object
+    const mega = new Car();
+
+    // Console
+    console.log(mega);
+    console.log(MyCar);
+
+    // Notes
+    console.log('You can see, there are 2 objects. One is a instance of the Car constance and another is a object without any instantiation.')
+
+
+</script>
+</body>
+</html>

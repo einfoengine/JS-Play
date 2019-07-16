@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Studetns = {
+            homeWork: function() {
+                console.log(`study ${this.subject} from page number ${this.pageStarts} to ${this.pageEnds}.`);
+            }
+        }
+        const maruf = Object.create(Studetns);
+        maruf.subject = 'Bangla';
+        maruf.pageStarts = 0;
+        maruf.pageEnds = 4;
+        maruf.homeWork();
+
+        const didiVai = Object.create(Studetns);
+        didiVai.homeWork();
+
+        const mehedi = Object.create(Studetns, {
+            name: {
+                value: 'mehedi'
+            }
+        });
+        // mehedi.dob = Date(21, 1, 99);
+        console.log(mehedi.name);
+        console.log(mehedi.workStatus);
+        // console.log(dob);
+
+
+
+        // this is how the data of maruf object is hidden from didiVai object.
+    </script>
+</body>
+
+</html>

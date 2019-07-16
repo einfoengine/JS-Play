@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Normal defination 
+        function myFunc(arg) {
+            console.log(arg);
+        }
+        myFunc("I am the function result");
+
+        // Uses of return
+        function myFunc1(a, b) {
+            return (a + b);
+        }
+        console.log(myFunc1(2, 3) + 5);
+
+        // Function expression
+        let myFuncE = function() {
+            console.log("I am function expression output");
+        }
+        myFuncE();
+
+        // Arrow function
+        let myFuncA = (a, b) => {
+            console.log("I am arrow function output");
+        }
+        myFuncA();
+
+        // Self invocation
+        (function myFungSI(x) {
+            console.log(`My age is ${x}`)
+        })(12);
+
+        // Currying function:
+        function mc(a) {
+            return function(b) {
+                return function(c) {
+                    return a + b + c;
+                }
+            }
+        }
+        console.log(mc(1)(1)(1));
+
+        // Call back
+        // calling a function in a functions argument
+        console.log("call back:");
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function calculate(a, b, callback) {
+            return callback(a, b);
+        }
+
+        console.log(calculate(10, 30, add));
+        // Recursion
+        // Calling the same function in its own scope
+        // Used self inv manner
+        console.log("Recursion:");
+        (function recurtion(x) {
+            x--;
+            console.log(x);
+            if (x > 0) {
+                return recurtion(x);
+            }
+        })(10);
+    </script>
+</body>
+
+</html>

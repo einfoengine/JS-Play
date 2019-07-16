@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*General*/
+        /*Classes*/
+        .line-block{
+            display: block;
+        }
+        /*Elements*/
+        #widget-tasks{
+            background: #eeeeee;
+        }
+        #tasksHolder > li > a:first-child{
+
+        }
+        #tasksHolder > li > a:last-child{
+
+        }
+    </style>
+</head>
+<body>
+    <div id="widget-tasks" class="widget-tasks">
+        <h3>Task List</h3>
+        <form action="event.html">
+            <level class="line-block">Add tasks</level>
+            <input type="text" placeholder="Input your task here"/>
+        </form>
+        <button id="add-task" type="button">Add</button>
+        <ul id="tasksHolder">
+            <li class="list-item">Please check your reminders first <a href="#">x</a><a href="#"> *</a></li>
+            <li class="target-item">One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+        <ul id="tasksHolder2">
+            <li class="list-item">Please check your reminders first <a href="#">x</a><a href="#"> *</a></li>
+            <li class="target-item">One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+        <button id="clear-tasks" type="button">Clear</button>
+    </div>
+    <script type="text/javascript">
+        let add = document.querySelector('#add-task');
+        let clear = document.querySelector('#clear-tasks');
+        let tasks = document.querySelector('#tasksHolder');
+        let del = document.querySelector('#tasksHolder > li > a:last-child');
+        let modArea = document.querySelector("#widget-tasks");
+        function test(e) {
+            console.log(e.type);
+            console.log(`Offset X : ${e.offsetX} Offset Y : ${e.offsetY}`);
+        }
+        function addTask(){
+            document.createElement(li);
+        }
+        document.addEventListener('click', function (e) {
+            let x = e.target;
+            if(x.className === 'target-item'){
+                x.nextElementSibling.style.color='red';
+            }
+            console.log(e.target.parentElement);
+        });
+
+        // add.addEventListener('click', test);
+        // add.addEventListener('mousedown', test);
+        // clear.addEventListener('mouseenter', test);
+        // clear.addEventListener('dblclick', test);
+        // del.addEventListener('mouseup', test);
+        // modArea.addEventListener('mouseenter', test);
+        // modArea.addEventListener('mousemove', test);
+        // modArea.addEventListener('mouseover', test);
+        // console.log(window);
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ***********************
+        // Constructors
+        // ***********************
+        // Book constructor
+        function Books(name, author, price) {
+            this.name = name;
+            this.author = author;
+            this.price = price;
+        }
+
+        // ***********************
+        // Prototypes
+        // ***********************
+        // Book prototype log
+        Books.prototype.logs = function(self, rack, number) {
+            this.self = self;
+            this.rack = rack;
+            this.number = number;
+            console.log(
+                `The book ${this.name} is stored in self NO ${this.self}, rack NO ${this.rack}, position NO ${this.number}, price for sell is ${this.price} BDT`
+            );
+        }
+
+        // ***********************
+        // Constructors with inharitance (Call)
+        // ***********************
+        // inharit book in religious books
+        function RiligiousBooks(name, author, writingDate, reviewedBy) {
+            Books.call(this, name, author);
+            this.writingDate = writingDate;
+            this.reviewedBy = reviewedBy;
+        }
+        // ***********************
+        // Prototypes inharited
+        // ***********************
+        // inharit prototype function/methods
+        RiligiousBooks.prototype = Object.create(Books.prototype);
+
+        // ***********************
+        // Creating instance
+        // ***********************
+        let MyBook = new Books('\'Marufs life\'', 'S A Maruf', 300);
+        const rBook = new RiligiousBooks('Milistone', 'Qutub', 'un known', 'not sure');
+        console.log(rBook);
+        rBook.logs(12, 34, 85);
+
+        // make RiligiousNooks prototype return RiligiousNooks
+        // ***********************
+        // Console
+        // ***********************
+        console.log(MyBook.name);
+        MyBook.logs(12, 'Green', 34);
+        MyBook.logs(12, 34, 945);
+    </script>
+</body>
+<!-- know more about
+1. Prototype
+2. Object.create
+3. +hotkey
+-->
+
+</html>
